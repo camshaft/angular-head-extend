@@ -1,8 +1,9 @@
 {
+  "repo": "camshaft/angular-head-extend",
   "name": "angular-head-extend",
   "main": "index.js",
   "version": "0.1.0",
   "scripts": [
-    "index.js",
+    "index.js"
   ]
 }
