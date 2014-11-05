@@ -3,7 +3,11 @@
  */
 
 var angular = window.angular;
-var mod = window.angular.module('head-extend', []);
+var name = 'head-extend';
+
+var mod = module.exports = window.angular.module(name, []);
+
+mod.name = name;
 
 mod.directive('headExtend', [
   '$compile',
