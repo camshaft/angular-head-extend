@@ -47,7 +47,11 @@ mod.directive('headExtend', [
 
         var links = Array.prototype.map.call(tEl.find('link'), $compile);
 
+        tEl.html('');
+        var html = $compile(tEl[0].outerHTML.replace('head-extend', 'div'));
+
         return function($scope, el, attrs) {
+          html($scope);
           replace(head.find('title'), title, $scope);
           metas.forEach(function(meta) {
             replace(meta.orig, meta.tmpl, $scope);
