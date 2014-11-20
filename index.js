@@ -25,10 +25,10 @@ mod.directive('headExtend', [
       if (!tmpl) return;
       var el = tmpl($scope);
 
-      prev ? prev.replaceWith(el) : head.append(el);
+      prev && prev.parent().length ? prev.replaceWith(el) : head.append(el);
 
       $scope.$on('$destroy', function() {
-        prev ? el.replaceWith(prev) : el.remove();
+        prev && prev.parent().length ? el.replaceWith(prev) : el.remove();
       });
     }
 
