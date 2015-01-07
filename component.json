@@ -2,7 +2,7 @@
   "repo": "camshaft/angular-head-extend",
   "name": "angular-head-extend",
   "main": "index.js",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "scripts": [
     "index.js"
   ]
