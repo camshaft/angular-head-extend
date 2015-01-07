@@ -45,7 +45,9 @@ mod.directive('headExtend', [
           return {tmpl: $compile(meta.outerHTML), orig: origMetas[name]};
         });
 
-        var links = Array.prototype.map.call(tEl.find('link'), $compile);
+        var links = Array.prototype.map.call(tEl.find('link'), function(link) {
+          return $compile(link.outerHTML);
+        });
 
         tEl.html('');
         var html = $compile(tEl[0].outerHTML.replace('head-extend', 'div'));
